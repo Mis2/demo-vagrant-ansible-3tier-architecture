@@ -1,0 +1,31 @@
+
+---
+
+- hosts: Web
+  remote_user: root
+  become: yes
+
+
+  roles:
+  - all  
+  - nginx
+
+- hosts: App
+  remote_user: root
+  become: yes
+
+
+  roles:
+  - all  
+  - tomcat
+
+- hosts: DB
+  remote_user: root
+  become: yes
+
+
+  roles:
+  - all 
+  - mysql
+
+  

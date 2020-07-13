@@ -1,0 +1,10 @@
+---
+- name: Update repositories and install antivirus
+  apt:
+    pkg:
+    - clamav
+    - clamav-daemon
+    update_cache: yes 
+- name: Install node exporter
+  apt:
+    name: prometheus-node-exporter    
